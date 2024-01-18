@@ -1,0 +1,9 @@
+pandas
+numpy
+scikit-learn
+pmlb
+shap
+matplotlib
+aif360
+fairlearn
+BlackBoxAuditing

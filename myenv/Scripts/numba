@@ -1,0 +1,8 @@
+#!C:\Users\sgoethals\Dropbox\PC (2)\Documents\Research\Project Oxford\unfairness_fairml\Unfair_ML\myenv\Scripts\python.exe
+# -*- coding: UTF-8 -*-
+from __future__ import print_function, division, absolute_import
+
+from numba.misc.numba_entry import main
+
+if __name__ == "__main__":
+    main()
