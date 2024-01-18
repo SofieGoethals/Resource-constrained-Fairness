@@ -31,13 +31,13 @@ from fairlearn.postprocessing import ThresholdOptimizer
 def assign_label(C,p,results):
     N_pri=int(C*(1-p))
     N_pro=int(C*p)
-    if N_pri>len(results.protected==False):
-        N_pro+=N_pri-len(results.protected==False)
-        N_pri=len(results.protected==False)
-    if N_pro>len(results.protected==True):
-        N_pri+=N_pro-len(results.protected==True)
-        N_pro=len(results.protected==True)
-    if N_pro>len(results.protected==True) and N_pri>len(results.protected==False):
+    if N_pri>sum(results.protected==False):
+        N_pro+=N_pri-sum(results.protected==False)
+        N_pri=sum(results.protected==False)
+    if N_pro>sum(results.protected==True):
+        N_pri+=N_pro-sum(results.protected==True)
+        N_pro=sum(results.protected==True)
+    if N_pro>sum(results.protected==True) and N_pri>sum(results.protected==False):
         print('Error: capacity is higher than the number of instances in the dataset')
         return
     scores_pri=results[results.protected==False].biased_scores
