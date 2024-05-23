@@ -4,6 +4,7 @@ old experiments/
 myenv/
 Data/
 clean code/Results/
+cv_experiments/redundant_code_results/
 
 
 # Byte-compiled / optimized / DLL files
